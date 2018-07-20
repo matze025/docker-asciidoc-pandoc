@@ -13,12 +13,12 @@ docker build .  -t mastze025/asciidoc-pandoc:latest
 
 ### Convert a adoc-Document to docbook
 ```bash
-docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest pandoc -r docbook -t docx -o Document.docx Document.xml
+docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest asciidoctor-pdf -r asciidoctor-diagram -b docbook5 Document.adoc
 ```
 
 ### Convert a docbook to docx
 ```bash
-docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest asciidoctor-pdf -r asciidoctor-diagram -b docbook5 Document.adoc
+docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest pandoc -r docbook -t docx -o Document.docx Document.xml
 ```
 
 ### Convert a adoc-Document to pdf
