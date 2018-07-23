@@ -23,7 +23,7 @@ docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest pandoc 
 
 ### Convert a adoc-Document to pdf
 ```bash
-docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest asciidoctor-pdf -r asciidoctor-diagram -b docbook5 Document.adoc
+docker run -it --rm -v $PWD:/workdir:rw mastze025/asciidoc-pandoc:latest asciidoctor-pdf -r asciidoctor-diagram -b pdf Document.adoc
 ```
 
 
